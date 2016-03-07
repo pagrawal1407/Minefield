@@ -85,4 +85,136 @@ FieldType Field::get(int x, int y)
 void Field::revealAdjacent(int x, int y)
 {
 	//TODO: Complete this function, revealAdjacent(int,int)
-}
+	int flag = 0;
+  try
+  {
+    if((x - 1) < 0 || (x - 1) >= FIELD_DIMENSION || y < 0 || y >= FIELD_DIMENSION)
+ 	  {
+ 		  throw "Out of bounds";
+ //     throw std::out_of_range;
+    }
+ 	  else
+    {
+      if (_map[x - 1][y] == MINE_SHOWN)
+      {
+        
+      }
+      if (_map[x - 1][y] == MINE_HIDDEN)
+      {
+        _map[x - 1][y] = MINE_SHOWN;
+      }
+      if (_map[x - 1][y] == EMPTY_SHOWN)
+      {
+        
+      }
+      if (_map[x - 1][y] == EMPTY_HIDDEN)
+      {
+        _map[x - 1][y] = EMPTY_SHOWN;
+      }
+    }
+  }
+  catch (...)
+  {
+    flag = 1;
+  }
+	
+  try
+  {
+    if((x + 1) < 0 || (x + 1) >= FIELD_DIMENSION || y < 0 || y >= FIELD_DIMENSION)
+ 	  {
+ 		  throw "Out of bounds";
+ //     throw std::out_of_range;
+    }
+ 	  else
+    { 
+      if (_map[x + 1][y] == MINE_SHOWN)
+      {
+        
+      }
+      if (_map[x + 1][y] == MINE_HIDDEN)
+      {
+        _map[x + 1][y] = MINE_SHOWN;
+      }
+      if (_map[x + 1][y] == EMPTY_SHOWN)
+      {
+        
+      }
+      if (_map[x + 1][y] == EMPTY_HIDDEN)
+      {
+        _map[x + 1][y] = EMPTY_SHOWN;
+      }
+    }
+  }
+  catch (...)
+  {
+    return false;
+  }
+	
+  try
+  {
+    if(x < 0 || x >= FIELD_DIMENSION || (y - 1) < 0 || (y - 1) >= FIELD_DIMENSION)
+ 	  {
+ 		  throw "Out of bounds";
+ //     throw std::out_of_range;
+    }
+ 	  else
+    {
+
+      if (_map[x][y - 1] == MINE_SHOWN)
+      {
+        
+      }
+      if (_map[x][y - 1] == MINE_HIDDEN)
+      {
+        _map[x][y - 1] = MINE_SHOWN;
+      }
+      if (_map[x][y - 1] == EMPTY_SHOWN)
+      {
+        
+      }
+      if (_map[x][y - 1] == EMPTY_HIDDEN)
+      {
+        _map[x][y - 1] = EMPTY_SHOWN;
+      }
+    }
+  }
+  catch (...)
+  {
+    return false;
+  }
+	
+  try
+  {
+    if(x < 0 || x >= FIELD_DIMENSION || (y + 1) < 0 || (y + 1) >= FIELD_DIMENSION)
+ 	  {
+ 		  throw "Out of bounds";
+ //     throw std::out_of_range;
+    }
+ 	  else
+    {
+     
+      if (_map[x][y + 1] == MINE_SHOWN)
+      {
+        
+      }
+      if (_map[x][y + 1] == MINE_HIDDEN)
+      {
+        _map[x][y + 1] = MINE_SHOWN;
+      }
+      if (_map[x][y + 1] == EMPTY_SHOWN)
+      {
+        
+      }
+      if (_map[x][y + 1] == EMPTY_HIDDEN)
+      {
+        _map[x][y + 1] = EMPTY_SHOWN;
+      }
+    }
+  }
+  catch (...)
+  {
+    flag = 1;
+  }
+  
+ }
+
