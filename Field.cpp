@@ -147,7 +147,7 @@ void Field::revealAdjacent(int x, int y)
   }
   catch (...)
   {
-    return false;
+    //return false;
   }
 	
   try
@@ -180,7 +180,7 @@ void Field::revealAdjacent(int x, int y)
   }
   catch (...)
   {
-    return false;
+    //return false;
   }
 	
   try
